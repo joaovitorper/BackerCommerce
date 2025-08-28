@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BackerCommerce.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,14 @@ namespace BackerCommerce
 {
     public partial class Menu_Principal : Form
     {
-        public Menu_Principal()
+        public Menu_Principal(Model.Usuário usuário)
         {
             InitializeComponent();
+        }
+
+        private void btnComandos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

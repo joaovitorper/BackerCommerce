@@ -22,7 +22,7 @@ namespace BackerCommerce.Model
         public DataTable Logar()
         {
 
-            string comando = "Select * From usuarios WHERE email  = @email AND = senha =@senha";
+            string comando = "Select * From usuarios WHERE email = @email AND senha = @senha";
             /*
             Caso vá utilizar o WHERE, empregue o uso de caracteres coringas,
             semelhante ao apresentado no metódo Cadastrar() acima.
@@ -31,10 +31,15 @@ namespace BackerCommerce.Model
             MySqlConnection con = conexaoBD.ObterConexao();
             MySqlCommand cmd = new MySqlCommand(comando, con);
 
+            // Obter o hash da Senha:
+            string senhahash = EasyEncryption.SHA.ComputeSHA256Hash(Senha);
+
+
             // Substituir os caracteres Coringas (@)
             cmd.Parameters.AddWithValue ("@email",Email);
-            cmd.Parameters.AddWithValue("@Senha", Senha); // ainda falta obter o hash
+            cmd.Parameters.AddWithValue("@Senha", senhahash); 
             cmd.Prepare();
+            
             // Declarar tabela que irá receber o resultado:
             DataTable tabela = new DataTable();
             // Preencher a tabela com o resultado da consulta

@@ -38,6 +38,32 @@ namespace BackerCommerce
                 //Colocar os valores dos Campos nos Atributos do Usuários:
                 usuario.Email = txtEmail.Text;
                 usuario.Senha = txtSenha.Text;
+
+                // Tabela que vai receber o resultado Do Select (Logar)
+                DataTable resultado = usuario.Logar();
+
+                // Verifica se acertou o email e senha:
+                if (resultado.Rows.Count == 0)
+                {
+                    MessageBox.Show("E-mail e /ou senha invalidos!", "Erro!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    //Armazenar as infos vindas do bd no objeto "usuario"
+                    usuario.Id = int.Parse(resultado.Rows[0]["id"].ToString());
+                    usuario.NomeCompleto = resultado.Rows[0]["nome_completo"].ToString();
+
+                    // Mudar para Menu Principal:
+                    Menu_Principal menuPrincipal = new Menu_Principal();
+                    Hide(); // Esconder a janela Atual:
+                    menuPrincipal.ShowDialog();// Mostrar o MenuPrincipal
+                    Show(); // Mostrar a tela de login ao sair do menu Principal
+
+
+                }
+
+
             }
         }
     }
