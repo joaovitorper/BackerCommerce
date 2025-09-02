@@ -55,7 +55,7 @@ namespace BackerCommerce
                     usuario.NomeCompleto = resultado.Rows[0]["nome_completo"].ToString();
 
                     // Mudar para Menu Principal:
-                    Menu_Principal menuPrincipal = new Menu_Principal();
+                    Menu_Principal menuPrincipal = new Menu_Principal(usuario);
                     Hide(); // Esconder a janela Atual:
                     menuPrincipal.ShowDialog();// Mostrar o MenuPrincipal
                     Show(); // Mostrar a tela de login ao sair do menu Principal
