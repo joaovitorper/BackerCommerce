@@ -85,12 +85,13 @@
             // 
             this.btnUsuarios.BackColor = System.Drawing.Color.Blue;
             this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.Location = new System.Drawing.Point(281, 349);
+            this.btnUsuarios.Location = new System.Drawing.Point(281, 342);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(264, 55);
             this.btnUsuarios.TabIndex = 4;
             this.btnUsuarios.Text = "Usuários";
             this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // lblDescricao
             // 
