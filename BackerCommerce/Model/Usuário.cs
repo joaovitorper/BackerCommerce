@@ -108,6 +108,7 @@ namespace BackerCommerce.Model
                 return false;
             }
         }
+
         public bool Apagar()
         {
             string comando = "DELETE FROM usuarios Where id = @id";
@@ -180,9 +181,15 @@ namespace BackerCommerce.Model
 
 
 
+
+
         }
 
 
     }
-}
+    }
+    
+
+
+
 

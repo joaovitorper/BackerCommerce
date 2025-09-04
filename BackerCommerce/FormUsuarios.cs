@@ -18,6 +18,7 @@ namespace BackerCommerce
     {// objetos Globais:
         Model.Usuário usuario;
 
+
         int idSelecionado = 0; // Armazenar o id do usuário Selecionado P/ apagar ou Editar
 
         public FormUsuarios(Model.Usuário usuario)
@@ -27,13 +28,11 @@ namespace BackerCommerce
 
             atualizarDgb();
         }
+
         public void atualizarDgb()
         {
             dgvUsuarios.DataSource= usuario.listar();
         }
-
-
-
 
 
 
@@ -219,7 +218,12 @@ namespace BackerCommerce
             grbApagar.Enabled = false;
             grbEditar.Enabled = false;
         }
+
     }
     
 } 
 
+ 
+                
+
+       

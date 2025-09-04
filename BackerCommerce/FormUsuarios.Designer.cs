@@ -45,13 +45,13 @@
             this.txtEmailEditar = new System.Windows.Forms.TextBox();
             this.txtEditar = new System.Windows.Forms.TextBox();
             this.lblNomeCompletoEditar = new System.Windows.Forms.Label();
-            this.grbApagar = new System.Windows.Forms.GroupBox();
-            this.lblApagardescricao = new System.Windows.Forms.Label();
-            this.btnApagar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnApagar1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.grbCadastro.SuspendLayout();
             this.grbEditar.SuspendLayout();
-            this.grbApagar.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvUsuarios
@@ -62,7 +62,7 @@
             this.dgvUsuarios.AllowUserToResizeRows = false;
             this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(12, 12);
+            this.dgvUsuarios.Location = new System.Drawing.Point(2, 0);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.Size = new System.Drawing.Size(1031, 222);
@@ -221,36 +221,36 @@
             this.lblNomeCompletoEditar.TabIndex = 6;
             this.lblNomeCompletoEditar.Text = "Nome Completo";
             // 
-            // grbApagar
+            // groupBox1
             // 
-            this.grbApagar.Controls.Add(this.lblApagardescricao);
-            this.grbApagar.Controls.Add(this.btnApagar);
-            this.grbApagar.Location = new System.Drawing.Point(12, 502);
-            this.grbApagar.Name = "grbApagar";
-            this.grbApagar.Size = new System.Drawing.Size(829, 100);
-            this.grbApagar.TabIndex = 3;
-            this.grbApagar.TabStop = false;
-            this.grbApagar.Text = "Apagar";
+            this.groupBox1.Controls.Add(this.btnApagar1);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 502);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(829, 100);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Apagar";
             // 
-            // lblApagardescricao
+            // label1
             // 
-            this.lblApagardescricao.AutoSize = true;
-            this.lblApagardescricao.Location = new System.Drawing.Point(29, 51);
-            this.lblApagardescricao.Name = "lblApagardescricao";
-            this.lblApagardescricao.Size = new System.Drawing.Size(176, 13);
-            this.lblApagardescricao.TabIndex = 9;
-            this.lblApagardescricao.Text = "Selecione um Usuários para Apagar";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(29, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Selecione um Usuários para Apagar";
             // 
-            // btnApagar
+            // btnApagar1
             // 
-            this.btnApagar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnApagar.Location = new System.Drawing.Point(452, 37);
-            this.btnApagar.Name = "btnApagar";
-            this.btnApagar.Size = new System.Drawing.Size(284, 41);
-            this.btnApagar.TabIndex = 8;
-            this.btnApagar.Text = "Apagar";
-            this.btnApagar.UseVisualStyleBackColor = false;
-            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
+            this.btnApagar1.BackColor = System.Drawing.Color.Lime;
+            this.btnApagar1.Location = new System.Drawing.Point(559, 37);
+            this.btnApagar1.Name = "btnApagar1";
+            this.btnApagar1.Size = new System.Drawing.Size(213, 41);
+            this.btnApagar1.TabIndex = 9;
+            this.btnApagar1.Text = "Cadastrar";
+            this.btnApagar1.UseVisualStyleBackColor = false;
+            this.btnApagar1.Click += new System.EventHandler(this.btnApagar_Click);
             // 
             // FormUsuarios
             // 
@@ -258,7 +258,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aqua;
             this.ClientSize = new System.Drawing.Size(1045, 644);
-            this.Controls.Add(this.grbApagar);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grbEditar);
             this.Controls.Add(this.grbCadastro);
             this.Controls.Add(this.dgvUsuarios);
@@ -269,8 +269,8 @@
             this.grbCadastro.PerformLayout();
             this.grbEditar.ResumeLayout(false);
             this.grbEditar.PerformLayout();
-            this.grbApagar.ResumeLayout(false);
-            this.grbApagar.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -294,8 +294,14 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.TextBox txtSenhaEditar;
         private System.Windows.Forms.Label lblSenhaEditar;
+
         private System.Windows.Forms.GroupBox grbApagar;
         private System.Windows.Forms.Button btnApagar;
         private System.Windows.Forms.Label lblApagardescricao;
+
+        private System.Windows.Forms.GroupBox groupBox1;
+      //  private System.Windows.Forms.Button btnApagar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnApagar1;
     }
 }
