@@ -25,7 +25,10 @@ namespace BackerCommerce
         }
 
         private void btnComandos_Click(object sender, EventArgs e)
-        {
+        { 
+            Form_Comandas form_Comandas = new Form_Comandas(usuario);
+            form_Comandas.ShowDialog();
+            
             
             
         }
@@ -37,6 +40,18 @@ namespace BackerCommerce
          FormUsuarios formUsuarios = new FormUsuarios(usuario);
          formUsuarios.ShowDialog();// Mostrar o form 
          
+        }
+
+        private void btnProduto_Click(object sender, EventArgs e)
+        {
+            Form_Produtos form_Produtos = new Form_Produtos(usuario);
+            form_Produtos.ShowDialog();
+        }
+
+        private void btnCaixa_Click(object sender, EventArgs e)
+        {
+            Form_Caixa form_Caixa = new Form_Caixa(usuario);
+            form_Caixa.ShowDialog();
         }
     }
 }

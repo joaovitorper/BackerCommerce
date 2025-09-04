@@ -12,9 +12,31 @@ namespace BackerCommerce
 {
     public partial class Form_Produtos : Form
     {
-        public Form_Produtos()
+        Model.Usuário usuario;
+
+        public Form_Produtos(Model.Usuário usuario)
         {
             InitializeComponent();
+            this.usuario=usuario;
+            ListarCategoriasCmb();
+
+
+        }
+        public void ListarCategoriasCmb()
+        {
+            Model.Categoria categoria = new Model.Categoria();
+            // Tabela pra Receber o Resultado do SDelect
+            DataTable tabela = categoria.listar();
+
+            foreach (DataRow dr in tabela.Rows)
+            {
+                // 1- Salgados
+                //2- Refrigerantes
+                cmbCategoriaCadastro.Items.Add($"{dr["id"]} - {dr["nome"]}");
+                cmbCategoriaEditar.Items.Add($"{dr["id"]} - {dr["nome"]}");
+
+            }
+
         }
     }
 }

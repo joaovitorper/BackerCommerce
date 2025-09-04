@@ -12,9 +12,11 @@ namespace BackerCommerce
 {
     public partial class Form_Comandas : Form
     {
-        public Form_Comandas()
+        Model.Usuário usuario;
+        public Form_Comandas(Model.Usuário usuario)
         {
             InitializeComponent();
+            this.usuario=usuario;
         }
     }
 }

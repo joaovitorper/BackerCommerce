@@ -12,9 +12,12 @@ namespace BackerCommerce
 {
     public partial class Form_Caixa : Form
     {
-        public Form_Caixa()
+        Model.Usuário Usuário;
+
+        public Form_Caixa(Model.Usuário usuário)
         {
             InitializeComponent();
+            Usuário=usuário;
         }
     }
 }
